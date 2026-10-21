@@ -1,0 +1,10 @@
+[versions]
+kotlin = "2.4.21"
+mavenPublish = "0.37.0"
+
+[libraries]
+hammwerk-materialColorPalette = { module = "de.hammwerk:material-color-palette", version = "1.0.0" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish" }
