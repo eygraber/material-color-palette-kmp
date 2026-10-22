@@ -1,10 +1,32 @@
 [versions]
-kotlin = "2.4.21"
-mavenPublish = "0.37.0"
+conventions = "0.0.103"
 
-[libraries]
-hammwerk-materialColorPalette = { module = "de.hammwerk:material-color-palette", version = "1.0.0" }
+detekt = "2.0.0-alpha.6"
+
+dokka = "2.2.0"
+
+kotlin = "2.4.21"
+
+ktlint = "1.8.0"
+ktlintCustomRules = "0.1.1"
+
+publish = "0.37.0"
 
 [plugins]
-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish" }
+conventions = { id = "com.eygraber.conventions", version.ref = "conventions" }
+
+[libraries]
+buildscript-detekt = { module = "dev.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+buildscript-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+buildscript-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+buildscript-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "publish" }
+
+# not actually used; just here so renovate picks it up
+# noinspection UnusedVersionCatalogEntry
+ktlint = { module = "com.pinterest.ktlint:ktlint-bom", version.ref = "ktlint" }
+
+# just here so renovate picks it up
+# noinspection UnusedVersionCatalogEntry
+ktlintCustomRules = { module = "com.eygraber.ktlint.rules:ktlint-rules", version.ref = "ktlintCustomRules" }
+
+test-hammwerk-materialColorPalette = "de.hammwerk:material-color-palette:1.0.0"
