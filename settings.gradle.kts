@@ -50,9 +50,10 @@ plugins {
   id("com.gradle.develocity") version "4.6.1"
 }
 
-rootProject.name = "material-color-palette-kmp"
+rootProject.name = "material-color-palette-kmp-root"
 
-include(":library")
+include(":material-color-palette-kmp")
+project(":material-color-palette-kmp").projectDir = file("library")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
