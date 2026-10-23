@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-  implementation("com.eygraber:material-color-palette-kmp:1.0.0")
+  implementation("com.eygraber:material-color-palette-kmp:1.0.1")
 }
 ```
 
